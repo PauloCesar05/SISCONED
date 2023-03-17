@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Proyecto Base</title>
+  <title>SISCONED</title>
   <link rel="icon" type="image/x-icon" href="{{ url('images/logohb.ico') }}">
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -17,13 +17,16 @@
     div nav ul {
         justify-content: center;
     }
+    li {
+      font-size: 18px;
+    }
   </style>
 
 </head>
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed sidebar-mini sidebar-collapse">
     <div class="wrapper">
         <!-- Navbar -->
-        <nav class="main-header navbar navbar-expand navbar-dark border-bottom-0" style="background-color: #065698;">
+        <nav class="main-header navbar navbar-expand navbar-dark border-bottom-0" style="background-color: #722C2C;">
             <!-- Left navbar links -->
             <ul class="navbar-nav">
               <li class="nav-item">
@@ -135,9 +138,9 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar elevation-4 sidebar-light-warning">
           <!-- Brand Logo -->
-          <a href="{{asset('/home')}}" class="brand-link">
-            <img src="{{ url('images/AdminLTELogo.png') }}" alt="baessh" class="brand-image img-circle elevation-3" style="opacity: .8">
-            <span class="brand-text font-weight-light">Proyecto base</span>
+          <a href="{{asset('/homeAdministrador')}}" class="brand-link">
+            <img src="{{ url('images/DGETI2.png') }}" alt="baessh" class="brand-image img-circle elevation-3" style="opacity: .8">
+            <span class="brand-text font-weight-light">SISCONED</span>
           </a>
 
           <!-- Sidebar -->
@@ -180,16 +183,16 @@
                 <!-- Add icons to the links using the .nav-icon class
                      with font-awesome or any other icon font library -->
                 <li class="nav-item active">
-                  <a href="{{asset('/home')}}" class="nav-link">
-                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <a href="{{asset('/homeAdministrador')}}" class="nav-link">
+                    <i class="nav-icon far fa-newspaper"></i>
                     <p>
-                      Inicio
+                      Noticias
                     </p>
                   </a>
                 </li>
                 <li class="nav-item">
                   <a href="#" class="nav-link">
-                    <i class="nav-icon fas fa-users""></i>
+                    <i class="nav-icon fas fa-users"></i>
                     <p>
                        Alumnos
                       <i class="fas fa-angle-left right"></i>
@@ -203,18 +206,43 @@
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="{{asset('/alumno/registrar')}}" class="nav-link">
+                      <a href="{{asset('/homeAdministrador/registrar/alumno')}}" class="nav-link"> 
                         <i class="far fa-circle nav-icon"></i>
                         <p>Registrar</p>
                       </a>
                     </li>
                   </ul>
                 </li>
+
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                      <i class="nav-icon fas fa-tools""></i>
+                    <i class="nav-icon fas fa-chalkboard-teacher"></i>
                       <p>
-                         Otro menu
+                         Docentes
+                        <i class="fas fa-angle-left right"></i>
+                      </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a href="{{asset('/homeAdministrador/consultar/docente')}}" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Consultar</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="{{asset('/homeAdministrador/registrar/docente')}}" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Registrar</p>
+                        </a>
+                      </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="nav-icon far fa-calendar-alt"></i> 
+                      <p>
+                         Horario
                         <i class="fas fa-angle-left right"></i>
                       </p>
                     </a>
@@ -222,17 +250,44 @@
                       <li class="nav-item">
                         <a href="{{asset('')}}" class="nav-link">
                           <i class="far fa-circle nav-icon"></i>
-                          <p>Consultar</p>
+                          <p>Generar horarios</p>
                         </a>
                       </li>
                       <li class="nav-item">
                         <a href="{{asset('')}}" class="nav-link">
                           <i class="far fa-circle nav-icon"></i>
-                          <p>Registrar</p>
+                          <p>Consultar horarios</p>
                         </a>
                       </li>
                     </ul>
                 </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="nav-icon fas fa-bookmark"></i>
+                      <p>
+                         Reglamento
+                        <i class="fas fa-angle-left right"></i>
+                      </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a href="{{asset('/homeAdministrador/reglamento')}}" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Reglamento escolar</p>
+                        </a>
+                      </li>
+                    </ul>
+                    <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a href="{{asset('/homeAdministrador/reglamento')}}" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Descargar Reglamento</p>
+                        </a>
+                      </li>
+                    </ul>
+                </li>
+
               </ul>
             </nav>
             <!-- /.sidebar-menu -->

@@ -14,16 +14,16 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans text-gray-900 antialiased">
-        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
-            <div>
-                <a href="/">
-                    <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-                </a>
-            </div>
-
-            <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
+        
+        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 form-group col-6" style="background-color:#DDDDDD;">
+        <img src="{{ url('images/DGETI.png') }}" width="400" height="400"><br>
+        <div class="w-full sm:max-w-md mt-6 px-6 py-6 bg-white shadow-md overflow-hidden sm:rounded-lg" style="background-color: #5E2A2A; border-radius: 22px 22px 0px 0px; -webkit-box-shadow: 19px 10px 7px 5px rgba(101,101,101,0.40); -moz-box-shadow: 19px 10px 7px 5px rgba(101,101,101,0.4); box-shadow: 19px 10px 7px 5px rgba(101,101,101,0.4);"></div>
+            <div class="w-full sm:max-w-md px-6 py-4 bg-white shadow-md overflow-hidden" style="border-radius: 0px 0px 39px 22px; -webkit-box-shadow: 19px 18px 7px 5px rgba(101,101,101,0.4); -moz-box-shadow: 19px 18px 7px 5px rgba(101,101,101,0.4); box-shadow: 19px 18px 7px 5px rgba(101,101,101,0.4);">
+        
+            
                 {{ $slot }}
             </div>
+            
         </div>
     </body>
 </html>

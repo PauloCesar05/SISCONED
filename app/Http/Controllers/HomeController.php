@@ -9,7 +9,8 @@ use PHPUnit\Framework\Error\Notice;
 class HomeController extends Controller
 {
     public function home(){
-        return view('home');
+        $noticias = Noticia::all();
+        return view('home', compact('noticias'));
     }
 
     public function homeAdministrador(){

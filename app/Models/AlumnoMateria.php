@@ -6,14 +6,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Noticia extends Model
+class AlumnoMateria extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $table = 'noticias';
+    protected $table = "alumno_materias";
 
-    protected $fillable = [
-        'mensaje'
-    ];
-    
+    public function materia(){
+        return $this->belongsTo(Materia::class, 'materia_id');
+    }
 }

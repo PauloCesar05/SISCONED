@@ -1,10 +1,36 @@
 @extends('appAdmin')
 
 @section('titulo')
-    <h1>Noticias</h1>
+    <h1 style="color: #757575">Noticias</h1>
 @stop
 
 @section('contenido')
+
+
+<section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+              <form action="{{url ('/homeAdministrador/publicar')}}" method= "POST">
+              @csrf
+              <div class="form-group">
+              <label for="">¿Qué estás pensando?</label>
+              <input type="text" class="form-control" name="mensaje" required> <br>
+              <input type="submit" value="Publicar" class="btn btn-primary">
+              </div>
+              </form>
+          </div>
+              
+                
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <br>
+
 <section class="content">
     <div class="container-fluid">
       <div class="row">
@@ -22,6 +48,8 @@
                 </div>
                 <div class="timeline-footer">
                   <a class="btn btn-primary btn-sm">Ir al detalle</a>
+                  <a href="{{url('/homeAdministrador/eliminar')}}/{{$n->id}}" class="btn btn-danger btn-sm">Eliminar</a>
+
                 </div>
               </div>
             </div>
