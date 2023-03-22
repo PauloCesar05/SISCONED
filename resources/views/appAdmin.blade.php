@@ -23,7 +23,7 @@
   </style>
 
 </head>
-<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed sidebar-mini sidebar-collapse">
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed sidebar-mini sidebar-collapse" style="background-color: #F3F3F3;">
     <div class="wrapper">
         <!-- Navbar -->
         <nav class="main-header navbar navbar-expand navbar-dark border-bottom-0" style="background-color: #722C2C;">
@@ -136,7 +136,7 @@
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
-        <aside class="main-sidebar elevation-4 sidebar-light-warning">
+        <aside class="main-sidebar elevation-4 sidebar-light-warning" >
           <!-- Brand Logo -->
           <a href="{{asset('/homeAdministrador')}}" class="brand-link">
             <img src="{{ url('images/DGETI2.png') }}" alt="baessh" class="brand-image img-circle elevation-3" style="opacity: .8">
@@ -255,7 +255,7 @@
           <!-- /.sidebar -->
         </aside>
 
-        <div class="content-wrapper">
+        <div class="content-wrapper" style="background-color: #F3F3F3;">
             <section class="content-header">
                 <div class="container-fluid">
                     <div class="row mb-2">

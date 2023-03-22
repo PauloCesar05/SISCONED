@@ -19,7 +19,7 @@
   </style>
 
 </head>
-<body>
+<body style="background-color: #F3F3F3;">
   <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark" style = "background-color: #5E2A2A;">
   <a class="navbar-brand" href="#">Nombre del plantel</a>
@@ -53,8 +53,9 @@
     </ul>
 </nav>
 <br>
-
+<div class="table-responsive" style="background-color: #;">
       @yield('contenido')
+  </div>
    
   <!-- jQuery -->
 <script src="{{asset('js/jquery.min.js')}}"></script>
