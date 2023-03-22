@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use PDF;
 use App\Models\Alumno;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AlumnoController extends Controller
 {
@@ -35,10 +36,23 @@ class AlumnoController extends Controller
 
 
     }
+
+    public function perfil(){
+
+        $alumno=Alumno::find(Auth::user()->alumno_id);
+        
+        return view('alumno.perfilalumno', compact('alumno')); 
+    }
+
+    public function inicio(){
+       
+    
+        return view('');
+    }
     
 
     public function reportePdf(){
-        $alumnos = array("Alumno1", "Alumno2", "Alumno3"); //DAtos de la base de datos
+        $alumnos = array("Alumno1", "Alumno2", "Alumno3"); //Datos de la base de datos
         PDF::SetPaper('A4', 'landscape'); //Configuracion de la libreria
         $pdf = PDF::loadView('PDF.reporteGenerico', array('alumnos' => $alumnos)); //Carga la vista y la convierte a PDF
         return $pdf->download("reporteGenerico.pdf"); //Descarga el PDF con ese nombre

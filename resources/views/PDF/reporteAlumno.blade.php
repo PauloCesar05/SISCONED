@@ -81,7 +81,7 @@
    
 
 
-<table style = "margin-left: auto; margin-right: auto;"">
+<table style = "margin-left: auto; margin-right: auto;">
   <tr style = "background-color: #454545; text-align: center; color: white;"  class="principal">
     <td colspan="2" >Historial Académico</td> 
   </tr> 

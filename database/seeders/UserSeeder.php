@@ -17,19 +17,23 @@ class UserSeeder extends Seeder
     {
         User::create([
             'name' => 'Luis Carlos',
-            'email' => 'santillan.itc@gamil.com',
+            'email' => 'santillan.itc@gmail.com',
             'password' => bcrypt('carlos123')
         ])->assignRole('admin');
 
         User::create([
             'name' => 'DAMIAN EDUARDO',
             'alumno_id' => 1,
-            'email' => 'damian@gmail.com',
+            'email' => 'DAMIAN.NAVEJAS@dgeti.com',
             'password' => bcrypt('damian123')
         ])->assignRole('alumno');
-    }
 
-    
-        
+        User::create([
+            'name' => 'MIGUEL ANGEL',
+            'alumno_id' => 2,
+            'email' => 'MIGUEL.GARCIA@dgeti.com',
+            'password' => bcrypt('miguel123')
+        ])->assignRole('alumno');
+    }
     
 }
