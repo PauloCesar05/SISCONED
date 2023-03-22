@@ -16,10 +16,6 @@
                 <div class="timeline-body">
                   {{ $n->mensaje }}
                 </div>
-                <div class="timeline-footer">
-                  <a class="btn btn-primary btn-sm">Ir al detalle</a>
-              
-                </div>
               </div>
             </div>
             @endforeach

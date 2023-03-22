@@ -88,28 +88,28 @@
   
     <tr>
       <td class="relleno1"><p><b>Nombre del subsistema:</b><br> DIRECCIÓN GENERAL DE EDUCACIÓN <br>TECNOLÓGICA INDUSTRIAL Y DE <br>SERVICIOS</p></td>
-      <td class="relleno"><p><b>CURP:</b><br> {{ $alumno-> CURP}}</p></td>
+      <td class="relleno"><p><b>Nombre del alumno:</b><br> {{ $alumno-> nombre_completo}}</p></td> 
     </tr>
 
     <tr>
     <td class="relleno"><p><b>Nombre del Plantel:</b><br> CENTRO DE ESTUDIOS TECNOLÓGICA <br>INDUSTRIAL Y DE SERVICIOS</p></td> 
-    <td class="relleno"><p><b>Nombre del alumno:</b><br> {{ $alumno-> nombre_completo}}</p></td> 
+    <td class="relleno"><p><b>CURP:</b><br> {{ $alumno-> CURP}}</p></td>
     </tr>
 
   
 
     <tr>
     <td class="relleno"><p><b>Folio RNA:</b></p></td>
+    <td class="relleno"><p><b>Número de control:</b><br>{{$alumno->numero_control}}</p></td>
+    </tr>
+
+    <tr>
     <td class="relleno"><p><b>Periodo Ingreso:</b></p></td>
+    <td class="relleno"><p><b>Modalidad educativa:</b><br>Escolarizada</p></td>
     </tr>
 
     <tr>
     <td class="relleno"><p><b>Avance creditos:</b></p></td>
-    <td class="relleno"><p><b>Modalidad educativa:</b></p></td>
-    </tr>
-
-    <tr>
-    <td class="relleno"><p><b>Escolarizada</b></p></td>
     <td class="relleno"><p><b>Opción educativa:</b><br>Presencial</p></td>
     </tr>
 

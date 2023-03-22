@@ -16,7 +16,7 @@
               @csrf
               <div class="form-group">
               <label for="">¿Qué estás pensando?</label>
-              <input type="text" class="form-control" name="mensaje" required> <br>
+              <input type="text" autocomplete="off" class="form-control" name="mensaje" required> <br>
               <input type="submit" value="Publicar" class="btn btn-primary">
               </div>
               </form>
