@@ -22,7 +22,7 @@
 <body>
   <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark" style = "background-color: #5E2A2A;">
-  <a class="navbar-brand" href="#">Cetis No.107</a>
+  <a class="navbar-brand" href="#">Nombre del plantel</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -31,14 +31,14 @@
   </div>
     <ul class="navbar-nav">
       <li class="nav-item active"> 
-        <a class="nav-link" href="">Inicio <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{{asset('/home')}}">Inicio <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
           <i class="far fa-user-circle"></i>
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Perfil</a>
+          <a class="dropdown-item" href="{{asset('/perfilalumno')}}">Perfil</a>
           <a class="dropdown-item" href="#">Horario</a>
           <a class="dropdown-item" href="#">Kardex</a>
           <div class="dropdown-divider"></div>
@@ -52,13 +52,10 @@
       </li>
     </ul>
 </nav>
-<section class="content" style="padding:0 .99rem !important;">
-  <div class="card card-secondary">
-    <div class="card-body table-responsive">
+<br>
+
       @yield('contenido')
-    </div>
-  </div>
-  </section>
+   
   <!-- jQuery -->
 <script src="{{asset('js/jquery.min.js')}}"></script>
 <!-- overlayScrollbars -->

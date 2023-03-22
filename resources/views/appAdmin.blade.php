@@ -238,54 +238,14 @@
                     </ul>
                 </li>
 
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      <i class="nav-icon far fa-calendar-alt"></i> 
-                      <p>
-                         Horario
-                        <i class="fas fa-angle-left right"></i>
-                      </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                      <li class="nav-item">
-                        <a href="{{asset('')}}" class="nav-link">
-                          <i class="far fa-circle nav-icon"></i>
-                          <p>Generar horarios</p>
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="{{asset('')}}" class="nav-link">
-                          <i class="far fa-circle nav-icon"></i>
-                          <p>Consultar horarios</p>
-                        </a>
-                      </li>
-                    </ul>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
+                <li class="nav-item active">
+                    <a href="{{asset('/homeAdministrador/reglamento')}}" class="nav-link">
                       <i class="nav-icon fas fa-bookmark"></i>
                       <p>
                          Reglamento
-                        <i class="fas fa-angle-left right"></i>
+                        
                       </p>
                     </a>
-                    <ul class="nav nav-treeview">
-                      <li class="nav-item">
-                        <a href="{{asset('/homeAdministrador/reglamento')}}" class="nav-link">
-                          <i class="far fa-circle nav-icon"></i>
-                          <p>Reglamento escolar</p>
-                        </a>
-                      </li>
-                    </ul>
-                    <ul class="nav nav-treeview">
-                      <li class="nav-item">
-                        <a href="{{asset('/homeAdministrador/reglamento')}}" class="nav-link">
-                          <i class="far fa-circle nav-icon"></i>
-                          <p>Descargar Reglamento</p>
-                        </a>
-                      </li>
-                    </ul>
                 </li>
 
               </ul>

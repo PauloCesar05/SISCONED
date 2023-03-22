@@ -34,7 +34,8 @@ Route::group(['middleware' => ['alumno', 'role:alumno']], function(){
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/homeNoticia', [NoticiasAlumnoController::class, 'home']);
     Route::get('/home', [HomeController::class, 'home']);
-
+    Route::get('/perfilalumno', [AlumnoController::class, 'perfil']);
+    
     
 });
 Route::group(['middleware' => ['admin', 'role:admin']], function(){
