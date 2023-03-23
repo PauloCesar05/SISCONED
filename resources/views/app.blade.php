@@ -17,11 +17,10 @@
         justify-content: center;
     }
   </style>
-
 </head>
-<body style="background-color: #F3F3F3;">
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed sidebar-mini sidebar-collapse" style="background-color: #F3F3F3;">
   <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark" style = "background-color: #5E2A2A;">
+<nav class="navbar navbar-expand navbar-dark" style = "background-color: #5E2A2A;">
   <a class="navbar-brand" href="#">Nombre del plantel</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>

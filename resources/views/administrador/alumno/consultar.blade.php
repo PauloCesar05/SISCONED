@@ -13,7 +13,7 @@
      
 
         <form class="form-inline my-2 my-lg-0 float-right" method="get" action="{{ url('/alumno/consultar')}}" role="Search">
-        <input name="termino" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar" value="{{request()->get('termino','')}}">
+        <input name="termino" class="form-control mr-sm-2" style="width: 300px" type="search" placeholder="Buscar" aria-label="Buscar" value="{{request()->get('termino','')}}">
         <button class="btn btn-outline-success my-2 my-sm-0" data-card-widget="collapse" type="submit">Buscar</button>
         </form><br><br>
     
