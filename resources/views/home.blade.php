@@ -1,5 +1,7 @@
 @extends('app')
-
+@section('titulo')
+    <h1 style="color: #757575">Noticias</h1>
+@stop
 @section('contenido')
 <section class="content">
     <div class="container-fluid">

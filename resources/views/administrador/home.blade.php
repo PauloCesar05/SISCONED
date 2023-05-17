@@ -14,7 +14,7 @@
           <div class="form-group ">
               <form action="{{url ('/homeAdministrador/publicar')}}" method= "POST" class="row g-4 mt-3">
               @csrf
-              <div class="form-group col-9">
+              <div class="form-group col-12">
               <label for="">¿Qué estás pensando?</label>
               <input type="text" autocomplete="off" class="form-control" name="mensaje" required> <br>
               
