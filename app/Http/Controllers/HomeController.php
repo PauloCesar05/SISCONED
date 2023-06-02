@@ -9,12 +9,12 @@ use PHPUnit\Framework\Error\Notice;
 class HomeController extends Controller
 {
     public function home(){
-        $noticias = Noticia::all();
+        $noticias = Noticia::orderBy('id', 'DESC')->get();
         return view('home', compact('noticias'));
     }
 
     public function homeAdministrador(){
-        $noticias = Noticia::all();
+        $noticias = Noticia::orderBy('id', 'DESC')->get();
 
         return view('administrador.home', compact('noticias'));
     }

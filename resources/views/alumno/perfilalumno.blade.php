@@ -1,6 +1,7 @@
 @extends('app')
 
 
+
 @section('contenido')
 
 

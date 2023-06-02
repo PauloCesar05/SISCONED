@@ -11,15 +11,22 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
-          <div class="form-group">
-              <form action="{{url ('/homeAdministrador/publicar')}}" method= "POST">
+          <div class="form-group ">
+              <form action="{{url ('/homeAdministrador/publicar')}}" method= "POST" class="row g-4 mt-3">
               @csrf
-              <div class="form-group">
+              <div class="form-group col-12">
               <label for="">¿Qué estás pensando?</label>
               <input type="text" autocomplete="off" class="form-control" name="mensaje" required> <br>
-              <input type="submit" value="Publicar" class="btn btn-primary">
+              
+              <div class="form-group">
+              <input type="submit" value="Publicar" class="btn btn-success">
+              <input type="file" id="exampleFormControlFile1">
+              </div>
+
               </div>
               </form>
+
+           
           </div>
               
                 
@@ -40,14 +47,13 @@
             <div>
               <i class="fas fa-user bg-green"></i>
               <div class="timeline-item">
-                <span class="time"><i class="fas fa-clock"></i> {{ $n->created_at }}</span>
-                <h3 class="timeline-header"><a href="#">Administrador</a> equipo administrativo</h3>
+                <span class="time"><i class="fas fa-clock"></i> {{ $n->fecha }}</span>
+                <h3 class="timeline-header"><a href="#">{{ Auth::user()->name; }}</a> equipo administrativo</h3>
 
                 <div class="timeline-body">
                   {{ $n->mensaje }}
                 </div>
-                <div class="timeline-footer">
-                  <a class="btn btn-primary btn-sm">Ir al detalle</a>
+                <div class="timeline-footer"> 
                   <a href="{{url('/homeAdministrador/eliminar')}}/{{$n->id}}" class="btn btn-danger btn-sm">Eliminar</a>
 
                 </div>

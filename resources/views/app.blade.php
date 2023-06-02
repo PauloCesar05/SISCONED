@@ -18,9 +18,12 @@
     }
   </style>
 </head>
+
+
+
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed sidebar-mini sidebar-collapse" style="background-color: #F3F3F3;">
   <!-- NAVBAR -->
-<nav class="navbar navbar-expand navbar-dark" style = "background-color: #5E2A2A;">
+<nav class="navbar navbar-expand navbar-dark" style="background-color: #5E2A2A;">
   <a class="navbar-brand" href="#">Nombre del plantel</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -38,8 +41,7 @@
         </a>
         <div class="dropdown-menu">
           <a class="dropdown-item" href="{{asset('/perfilalumno')}}">Perfil</a>
-          <a class="dropdown-item" href="#">Horario</a>
-          <a class="dropdown-item" href="#">Kardex</a>
+          <a class="dropdown-item" href="{{ url('reporte/pdf', auth()->user()->id) }}" method="GET">Kardex</a>
           <div class="dropdown-divider"></div>
           <a class="d-block" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" style="color: black; text-align: center">
             {{ __('Cerrar sesión') }}
@@ -51,7 +53,20 @@
       </li>
     </ul>
 </nav>
-<br>
+<section class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            @yield('titulo')
+                        </div>
+                        <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            @yield('breadcrum')
+                        </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
 <div class="table-responsive" style="background-color: #;">
       @yield('contenido')
   </div>
