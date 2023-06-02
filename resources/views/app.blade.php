@@ -23,7 +23,7 @@
 
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed sidebar-mini sidebar-collapse" style="background-color: #F3F3F3;">
   <!-- NAVBAR -->
-<nav class="navbar navbar-expand navbar-dark" style = "background-color: #5E2A2A;">
+<nav class="navbar navbar-expand navbar-dark" style="background-color: #5E2A2A;">
   <a class="navbar-brand" href="#">Nombre del plantel</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -41,7 +41,7 @@
         </a>
         <div class="dropdown-menu">
           <a class="dropdown-item" href="{{asset('/perfilalumno')}}">Perfil</a>
-          <a class="dropdown-item" href="{{ url('reporte/pdf') }}/{{ $alumno_id->id }}" method="GET">Kardex</a>
+          <a class="dropdown-item" href="{{ url('reporte/pdf', auth()->user()->id) }}" method="GET">Kardex</a>
           <div class="dropdown-divider"></div>
           <a class="d-block" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" style="color: black; text-align: center">
             {{ __('Cerrar sesión') }}

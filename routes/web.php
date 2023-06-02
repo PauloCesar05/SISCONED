@@ -35,8 +35,9 @@ Route::group(['middleware' => ['alumno', 'role:alumno']], function(){
     Route::get('/homeNoticia', [NoticiasAlumnoController::class, 'home']);
     Route::get('/home', [HomeController::class, 'home']);
     Route::get('/perfilalumno', [AlumnoController::class, 'perfil']);
-    
-    
+    Route::get('/reporte/pdf/{id}', [AlumnoController::class, 'reporteAlumnoPdf']);
+    Route::get('alumno/materias', [AlumnoController::class, 'materias']);
+
 });
 Route::group(['middleware' => ['admin', 'role:admin']], function(){
     //Rutas de administrador
@@ -54,7 +55,7 @@ Route::group(['middleware' => ['admin', 'role:admin']], function(){
     Route::get('/alumno/consultar', [AlumnoController::class, 'consultar']);
     Route::get('/alumno/registrar', [AlumnoController::class, 'registrar']);
     Route::get('/reporte/pdf', [AlumnoController::class, 'reportePdf']);
-    Route::get('/reporte/pdf/{id}', [AlumnoController::class, 'reporteAlumnoPdf']);
+    
 
     //Ruta de ejemplo para obtener detalle de calificacion
     Route::get('alumno/materias', [AlumnoController::class, 'materias']);
