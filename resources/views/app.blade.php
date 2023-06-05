@@ -41,7 +41,7 @@
         </a>
         <div class="dropdown-menu">
           <a class="dropdown-item" href="{{asset('/perfilalumno')}}">Perfil</a>
-          <a class="dropdown-item" href="{{ url('reporte/pdf', auth()->user()->id) }}" method="GET">Kardex</a>
+          <a class="dropdown-item" href="{{ url('reporte/pdf', auth()->user()->alumno_id) }}" method="GET">Kardex</a>
           <div class="dropdown-divider"></div>
           <a class="d-block" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" style="color: black; text-align: center">
             {{ __('Cerrar sesión') }}
