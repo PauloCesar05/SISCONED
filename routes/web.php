@@ -54,7 +54,7 @@ Route::group(['middleware' => ['admin', 'role:admin']], function(){
     //Rutas de alumnos
     Route::get('/alumno/consultar', [AlumnoController::class, 'consultar']);
     Route::get('/alumno/registrar', [AlumnoController::class, 'registrar']);
-    Route::get('/reporte/pdf', [AlumnoController::class, 'reportePdf']);
+    Route::get('/reporte/pdf/{id}', [AlumnoController::class, 'reportePdf']);
     
 
     //Ruta de ejemplo para obtener detalle de calificacion

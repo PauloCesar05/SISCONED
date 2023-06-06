@@ -51,11 +51,11 @@ class AlumnoController extends Controller
     }
     
 
-    public function reportePdf(){
-        $alumnos = array("Alumno1", "Alumno2", "Alumno3"); //Datos de la base de datos
+    public function reportePdf($id){
+        $alumno = Alumno::with('materias')->find($id);
         PDF::SetPaper('A4', 'landscape'); //Configuracion de la libreria
-        $pdf = PDF::loadView('PDF.reporteGenerico', array('alumnos' => $alumnos)); //Carga la vista y la convierte a PDF
-        return $pdf->download("reporteGenerico.pdf"); //Descarga el PDF con ese nombre
+        $pdf = PDF::loadView('PDF.reporteAlumno', array('alumno' => $alumno)); //Carga la vista y la convierte a PDF
+        return $pdf->download("reporteAlumno".$alumno->id.".pdf"); //Descarga el PDF con ese nombre
     }
 
     public function reporteAlumnoPdf($id){

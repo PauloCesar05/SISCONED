@@ -21,12 +21,6 @@ class UserSeeder extends Seeder
             'password' => bcrypt('carlos123')
         ])->assignRole('admin');
 
-        User::create([
-            'name' => 'DAMIAN EDUARDO',
-            'alumno_id' => 1,
-            'email' => 'damian.navejas@dgeti.com',
-            'password' => bcrypt('damian123')
-        ])->assignRole('alumno');
 
         User::create([
             'name' => 'MIGUEL ANGEL',
@@ -36,10 +30,17 @@ class UserSeeder extends Seeder
         ])->assignRole('alumno');
 
         User::create([
-            'name' => 'BETHEL ANALY',
-            'alumno_id' => 5,
-            'email' => 'bethel.analy@dgeti.com',
-            'password' => bcrypt('bethel123')
+            'name' => 'PABLO CANEK',
+            'alumno_id' => 3,
+            'email' => 'pablo.canek@dgeti.com',
+            'password' => bcrypt('pablo123')
+        ])->assignRole('alumno');
+
+        User::create([
+            'name' => 'AOLANIS NAYLE',
+            'alumno_id' => 4,
+            'email' => 'aolanis.nayle@dgeti.com',
+            'password' => bcrypt('aolanis123')
         ])->assignRole('alumno');
     }
 
