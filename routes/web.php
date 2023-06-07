@@ -35,7 +35,7 @@ Route::group(['middleware' => ['alumno', 'role:alumno']], function(){
     Route::get('/homeNoticia', [NoticiasAlumnoController::class, 'home']);
     Route::get('/home', [HomeController::class, 'home']);
     Route::get('/perfilalumno', [AlumnoController::class, 'perfil']);
-    Route::get('/reporte/pdf/{id}', [AlumnoController::class, 'reporteAlumnoPdf']);
+    Route::get('/reporteAlumno/pdf/{id}', [AlumnoController::class, 'reporteAlumnoPdf']);
     Route::get('alumno/materias', [AlumnoController::class, 'materias']);
 
 });
